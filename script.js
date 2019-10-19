@@ -1,4 +1,4 @@
-const URL ="http://data.fixer.io/api/latest?access_key=2aab5ed2e3a1cfad94f69808af7703ad" //adress provider
+//const URL ="http://data.fixer.io/api/latest?access_key=2aab5ed2e3a1cfad94f69808af7703ad" //adress provider
 
 function getData(){
   var storageData = localStorage.getItem("datas");
@@ -13,7 +13,7 @@ function getData(){
         showCurrencies(currencies);
         showDate();
     } else {
-      fetch('URL')
+      fetch('http://data.fixer.io/api/latest?access_key=2aab5ed2e3a1cfad94f69808af7703ad')
       .then(response => response.text())
       .then(commits => localStorage.setItem("datas", commits));
     }
